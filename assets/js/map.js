@@ -1,13 +1,13 @@
 
 var map;
 
-function initAutocomplete() { 
+function initMap() { 
     
     // create the map. Cordinates centered in Antwerp
-    var antwerp_city = {lat: 52.219, lng: 4.402};
+    var antwerp_city = {lat: 51.219, lng: 4.402};
     map = new google.maps.Map(document.getElementById("map"), {        
          center:  antwerp_city,
-         zoom: 17                   
+         zoom: 13                   
     }); 
 
       // Create the Places service. This service requires the Places library. https://developers.google.com/maps/documentation/javascript/examples/place-search-pagination
@@ -21,7 +21,7 @@ function initAutocomplete() {
 
     // Perform a nearby search.
     var input = document.getElementById('user-input');
-    map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+    //map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
     service.nearbySearch(
         {location: antwerp_city, radius: 500, type: ['hotel']},
@@ -29,8 +29,8 @@ function initAutocomplete() {
             if (status !== 'OK') return;
 
             createMarkers(results);
-            moreButtons.disable = ipagination.hasNestPage;
-            getNextPage = pagination.hasNestPage && function() {
+            moreButton.disable = !pagination.hasNextPage;
+            getNextPage = pagination.hasNextPage && function() {
                 pagination.nextPage();
             };
         });
@@ -98,7 +98,8 @@ function initAutocomplete() {
 
             infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
             infowindow.open(map, marker);
-          })
+          
+
 
         /* Get each component of the address from the place details and then fill-in the corresponding id on the index.html page.
             Examples at: https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-addressform
@@ -114,9 +115,40 @@ function initAutocomplete() {
         document.getElementById('location').innerHTML = place.formatted_address;
         document.getElementById('lat').innerHTML = place.geometry.location.lat();
         document.getElementById('lon').innerHTML = place.geometry.location.lng();
-    }
+    });
 
-            
+}
+
+    
+    
+    function createMarkers(places) {
+  var bounds = new google.maps.LatLngBounds();
+  var placesList = document.getElementById('places');
+
+  for (var i = 0, place; place = places[i]; i++) {
+    var image = {
+      url: place.icon,
+      size: new google.maps.Size(71, 71),
+      origin: new google.maps.Point(0, 0),
+      anchor: new google.maps.Point(17, 34),
+      scaledSize: new google.maps.Size(25, 25)
+    };
+
+    var marker = new google.maps.Marker({
+      map: map,
+      icon: image,
+      title: place.name,
+      position: place.geometry.location
+    });
+
+    var li = document.createElement('li');
+    li.textContent = place.name;
+    placesList.appendChild(li);
+
+    bounds.extend(place.geometry.location);
+  }
+  map.fitBounds(bounds);
+}
 
 
 
