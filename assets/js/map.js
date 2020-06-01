@@ -19,6 +19,24 @@ function initAutocomplete() {
         if (getNextPage) getNextPage();
     };
 
+    // Perform a nearby search.
+    var input = document.getElementById('user-input');
+    map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+    service.nearbySearch(
+        {location: antwerp_city, radius: 500, type: ['hotel']},
+        function(results, status, pagination) {
+            if (status !== 'OK') return;
+
+            createMarkers(results);
+            moreButtons.disable = ipagination.hasNestPage;
+            getNextPage = pagination.hasNestPage && function() {
+                pagination.nextPage();
+            };
+        });
+
+        
+
 
 }
 
