@@ -35,7 +35,55 @@ function initAutocomplete() {
             };
         });
 
-        
+        // Adding Auto Complete Searh option. Examples at https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete
+
+        var autocomplete = new google.maps.places.Autocomplete(input);
+
+        // Bind the map's bounds (viewport) property to the autocomplete object,        
+        autocomplete.bindTo('bounds', map);
+
+        var infowindow = new google.maps.InfoWindow();
+        var marker = new google.maps.Marker({
+            map: map,
+            anchorPoint: new google.maps.Point(0, -29)
+        });
+
+        // Add an event listener. Example at: https://developers.google.com/maps/documentation/javascript/examples/rectangle-event
+
+        autocomplete.addListener('place_changed', function() {
+            infowindow.close();
+            marker.setVisible(false);
+            var place = autocomplete.getPlace();
+            if (!place.geometry) {
+                window.alert("No geometry data found for the specified location");
+                return;
+            }
+
+            // If the place has a geometry, then present it on a map.
+            if (place.geometry.viewport) {
+                map.fitBounds(place.geometry.viewport);
+            } else {
+                map.setCenter(place.geometry.location);
+                map.setZoom(17) //Because it looks good.
+            }
+
+        //Converting MarkerImage objects to type Icon. Example at https://developers.google.com/maps/documentation/javascript/markers
+            marker.setIcon(({
+                url: place.icon,
+                size: new google.maps.Size(71, 71),
+                origin: new google.maps.Point(0, 0),
+                anchor: new google.maps.Point(17, 34),
+                scaledSize: new google.maps.Size(35, 35)
+            }));
+
+            marker.setPosition(place.geometry.location);
+            marker.setVisible(true);
+
+        })
+
+
+            
+
 
 
 }
