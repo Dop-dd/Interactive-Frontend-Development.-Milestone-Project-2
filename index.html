@@ -17,37 +17,36 @@
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCd097yoP0Le6Qa2-JctA8ZQSjq1UTEF60&libraries=places"></script>
 	<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
 
-     
-</head>            
-<body>    
-  
-    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+    
+</head>              
+<body>     
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
         <a href="index.html" class="navbar-brand">SleepOver <span><i class="fa fa-hotel"></i></span></a>
                    
                 <input id="user-input" class="searchbox " type="text" placeholder="Enter search here">  
     </nav>
-   
+     
   
-  
+    
     <div id="map" class="container-fulid"></div>  
 
-    <div id="right-panel">  
-      <h2 id="hotels-closeby">Nearby Hotels</h2>    
-      <ul id="places"></ul>    
-      <button id="more">More results</button>
+    <div id="right-panel">   
+      <h3 id="hotels-closeby">Nearby Hotels</h3>       
+      <ul id="places"></ul>       
+      <button id="more">More results</button> 
     </div> 
  
      <!--------------jQuery container-->
-
+ 
 <section class=" details container">
   <button type="button" class="btn btn-secondary btn-lg btn-block hero-button">Get full location address</button> 
 
- <div class="full-address">  
-        
+ <div class="full-address">       
     
      <div class="col-sm-12"> 
 
-   <table class="location-details" style="width:100%">
+ <!-- Display geolocation data -->  
+   <table class="location-details">
   <tr>
     <th>Full Address</th>
     <th>Postal Code</th> 
@@ -55,51 +54,34 @@
     <th>Latitude</th> 
     <th>Longitude</th>
   </tr>
-  <tr>
+  <tr> 
     <td><span id="location"></span></td>
     <td><span id="postal_code"></span></td>
     <td><span id="country"></span></td>
     <td><span id="lat"></span></td>
     <td><span id="lon"></span></td>
   </tr>
-  
-</table>
-
-
-       <!-- Display geolocation data -->  
-    
-     <!----     
-     <ul class="location-details">
-        <li>Full Address: <span id="location"></span></li> 
-        <li>Postal Code: <span id="postal_code"></span></li>
-        <li>Country: <span id="country"></span></li>
-        <li>Latitude: <span id="lat"></span></li>
-        <li>Longitude: <span id="lon"></span></li>   
-     </ul>     --->
-    
-    </div>      
+  </table>         
+     
+</div> 
+      
 </div> 
   <button onclick="window.location.reload();" class="refresh">refresh <i class="fa fa-refresh"></i></button>
  
-</section>  
-<div>
+</section>
      
-</div> 
-
 <!-- Footer -->
-<footer class="page-footer font-small blue"> 
+<footer class="page-footer font-small blue container-fluid"> 
 
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+  <div class="footer-copyright text-center py-2 ">© 2020 Copyright:
+    <a href="index.html"> Antwerp SleepOver</a>
   </div>
-  <!-- Copyright -->
-
-</footer>
-<!-- Footer -->
-
+  <!-- End of Copyright -->      
+</footer>  
+ 
            
-<!-- GooleMaps API Key-->         
+<!-- GooleMaps API Key-->          
 
 <!----  
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCd097yoP0Le6Qa2-JctA8ZQSjq1UTEF60&libraries=places&callback=initAutocomplete"
@@ -112,7 +94,6 @@
 
 <script src="assets/js/map.js"></script>
 
-
-</body>   
+</body> 
 
 </html>
