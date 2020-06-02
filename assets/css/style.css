@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
 
-/* Always set the map height explicitly to define the size of the div
- * element that contains the map. */
+
 #map {
         height: 80%;
-        margin-top: 30px;
+        margin-top: 5px;       
       }
-      /* Optional: Makes the sample page fill the window. */
+      /* Makes the sample page fill the required window. */
 
 html, body {
        height: 100%;
@@ -14,10 +13,205 @@ html, body {
        padding: 0;
       }
 
-header {
-    height: 70px;
+.navbar {
+    height: 100px;
     width: 100%;
-}     
+    background-color: rgba(77, 74, 71, 0.89);
+    padding: 10px 10px;
+    margin-bottom: 5px;   
+}   
 
-/****************************/
 
+/*********Locatio details*******************/
+
+.details {
+    height: 400px;
+    
+    margin: 30px 30px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;    
+    /*background-color: #897E7B; */
+    
+}
+
+.location-details {
+        margin-top: 20px; 
+        width: auto;
+        overflow: hidden; 
+        margin-left: auto;
+        margin-right: auto;  
+        border: 2px solid brown;
+        padding: 10px;
+        border-radius: 20px;        
+               
+     }
+
+
+     /*---------------------------------------------*/
+
+#right-panel {
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+      }
+
+      #right-panel select, #right-panel input {
+        font-size: 15px;
+      }
+
+      #right-panel select {
+        width: 100%;
+      }
+
+      #right-panel i {
+        font-size: 12px;
+      }
+
+      #right-panel {
+        font-family: Arial, Helvetica, sans-serif;
+        position: absolute;
+        left: 5px;
+        top: 45%;
+        margin-top: 2px;
+        height: 330px;
+        width: 200px;
+        padding: 5px;
+        z-index: 5;
+        border: 1px solid #999;
+        background: #fff;
+      }
+      
+      #hotels-closeby h3{
+        font-size: 14px;
+        margin: 0 0 5px 0;
+      }
+      #places  {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        height: 271px;
+        width: 200px;
+        overflow-y: scroll;
+      }
+      
+      #places li {
+        background-color: #fffbfb;;
+        padding: 10px;
+        
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      li:nth-child(odd) {
+        background-color: #fcfcfc;
+      }
+
+      #more {
+        width: 100%;
+        margin: 5px 0 0 0;
+        background-color: rgba(77, 74, 71, 0.89);
+        color: #fff; 
+      }
+
+/*----------end of Map -----------*/
+
+#user-input {
+    position: absolute;
+    left: 40%;   
+    top: 50px;
+    width: 230px;
+    height: 30px;
+    border-radius: 18px;
+    }
+
+.navbar-brand {
+  font-size: 30px;
+  color: white;
+}
+
+.fa {
+    color: yellow;    
+}
+
+#hotels-closeby {
+    color: #897E7B;
+}
+
+.span-color {
+    background-color: yellowgreen;
+}
+
+
+/*----------------Buttons------------------*/
+
+/*-----Refresh Button-----*/
+
+button.refresh {
+    background-color: rgb(134, 90, 7); 
+  border-radius: 18px;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline;
+  font-size: 26px;
+  margin: 70px 20px;
+  cursor: pointer;
+ transition: 0.3s;
+ position: absolute;  
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+   
+    
+}
+button.refresh:hover{
+	box-shadow: inset 10px 4px 18px #ec7728, inset 5px 5px 18px #4a4a4a;
+}
+
+/*-------Hero Button------*/
+
+.hero-button {
+  background-color: rgba(77, 74, 71, 0.89);
+  border-radius: none;
+  color: white;
+  text-align: center;
+  padding: 4px;
+  position:relative;  
+  bottom: 10px;
+  margin-top: 20px;   
+  text-decoration-style: none;
+  font-size: 30px;     
+  height: 100px; 
+  width: 100%;  
+  margin-bottom: 50px;
+}
+.full-address {
+    display: none;
+}
+
+/*------------------Footer-----------*/
+footer {
+    height: 50px;
+    background-color: rgba(77, 74, 71, 0.89);
+    position: relative;
+    margin-top: 30px;
+   
+}
+
+/*---------------------Table -------------*/
+
+table {
+     background-color: #f1f1c1;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+}
+
+/*---------------------- Social Links-------------*/
