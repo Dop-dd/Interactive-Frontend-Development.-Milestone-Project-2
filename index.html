@@ -10,45 +10,89 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" />
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>  
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/js/script.js"></script>
+    
+    <script type="text/javascript" src="assets/js/script.js"></script>      
+    
     <!-- GoogleMaps Places library -->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCd097yoP0Le6Qa2-JctA8ZQSjq1UTEF60&libraries=places"></script>
 	<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-   
-</head>
-<body> 
 
-<header>
-    <h3>Logo</h3>
-   
-</header>
      
-     <input id="user-input"  type="text" placeholder="Enter search here">   
-
-    <div id="map" class="container-fulid"></div>
-
-    <!-- Display geolocation data -->
-<ul class="geo-data">
-    <li>Full Address: <span id="location"></span></li>
-    <li>Postal Code: <span id="postal_code"></span></li>
-    <li>Country: <span id="country"></span></li>
-    <li>Latitude: <span id="lat"></span></li>
-    <li>Longitude: <span id="lon"></span></li>
-</ul>
-
-
+</head>            
+<body>    
   
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+        <a href="index.html" class="navbar-brand">SleepOver <span><i class="fa fa-hotel"></i></span></a>
+                   
+                <input id="user-input" class="searchbox " type="text" placeholder="Enter search here">  
+    </nav>
+   
+  
+  
+    <div id="map" class="container-fulid"></div>  
+
+    <div id="right-panel">  
+      <h2 id="hotels-closeby">Nearby Hotels</h2>    
+      <ul id="places"></ul>    
+      <button id="more">More results</button>
+    </div> 
+ 
+     <!--------------jQuery container-->
+
+<section class=" details container">
+  <button type="button" class="btn btn-secondary btn-lg btn-block hero-button">Get full location address</button> 
+
+ <div class="full-address">  
+        
+    
+     <div class="col-sm-12"> 
+       <!-- Display geolocation data -->
+    
+          
+     <ul class="location-details">
+        <li>Full Address: <span id="location"></span></li> 
+        <li>Postal Code: <span id="postal_code"></span></li>
+        <li>Country: <span id="country"></span></li>
+        <li>Latitude: <span id="lat"></span></li>
+        <li>Longitude: <span id="lon"></span></li>   
+     </ul>     
+    
+    </div>      
+</div> 
+  <button onclick="window.location.reload();" class="refresh">refresh <i class="fa fa-refresh"></i></button>
+ 
+</section>  
+<div>
+     
+</div> 
+
+<!-- Footer -->
+<footer class="page-footer font-small blue"> 
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+           
 <!-- GooleMaps API Key-->         
 
-<!---
+<!----  
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCd097yoP0Le6Qa2-JctA8ZQSjq1UTEF60&libraries=places&callback=initAutocomplete"
          async defer></script>
---->
+
+-->
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCd097yoP0Le6Qa2-JctA8ZQSjq1UTEF60&libraries=places&callback=initMap" async defer></script>
 
 
 <script src="assets/js/map.js"></script>
-    
+
+
 </body>   
+
 </html>
