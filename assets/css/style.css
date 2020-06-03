@@ -207,6 +207,8 @@ table {
       border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
+    border: 2px solid green;
+
 }
 
 table, th, td {
@@ -247,8 +249,7 @@ th, td {
 
 }
 */
-@media(max-width: 600px) {
- 
+@media only screen and (max-width: 600px) { 
 
   #user-input {
    position: absolute;
@@ -276,8 +277,32 @@ th, td {
     top: 40%;
  }
 
-table {
-    overflow-y: hidden;
+tbody {
+    font-size: 16px;
+ }
+ 
+ thead, td {
+     display: table-row;
+  }
+
+.table {
+    font-size: 12px;
+}
+
+
+ footer {
+     margin-top: 130px;
+ }
+
+.location-details {
+    position: relative;
+    right: 23px;
+    border-radius: 0px;
+}
+
+table, th, td {
+     border: none; 
+    border-collapse: collapse;
 }
 
 }
