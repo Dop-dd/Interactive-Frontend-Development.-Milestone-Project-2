@@ -98,7 +98,9 @@ function initMap() {
 
             infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
             infowindow.open(map, marker);
+
           
+           
 
 
         /* Get each component of the address from the place details and then fill-in the corresponding id on the index.html page.
