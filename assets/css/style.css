@@ -72,7 +72,7 @@ html, body {
         font-family: Arial, Helvetica, sans-serif;
         position: absolute;
         left: 5px;
-        top: 45%;
+        top: 33%;
         margin-top: 2px;
         height: 330px;
         width: 200px;
@@ -274,7 +274,7 @@ th, td {
     font-family: Arial, Helvetica, sans-serif;
     position: absolute;
     left: 5px;
-    top: 40%;
+    top: 25%;
  }
 
 tbody {
@@ -290,10 +290,6 @@ tbody {
 }
 
 
- footer {
-     margin-top: 130px;
- }
-
 .location-details {
     position: relative;
     right: 23px;
@@ -304,6 +300,10 @@ table, th, td {
      border: none; 
     border-collapse: collapse;
 }
+ 
+ footer {
+     margin-top: 130px;
+ }
 
 }
 

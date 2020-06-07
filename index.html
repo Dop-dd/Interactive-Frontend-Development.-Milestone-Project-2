@@ -18,56 +18,60 @@
 	<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
 
         
-</head>                 
+</head>                     
 <body>        
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <a href="index.html" class="navbar-brand">SleepOver <span><i class="fa fa-hotel"></i></span></a>
                    
                 <input id="user-input" class="searchbox " type="text" placeholder="Enter search here">  
-    </nav>
+    </nav>  
                
     <div id="map" class="container-fluid"></div>   
 
     <div id="right-panel">    
-      <h3 id="hotels-closeby">Nearby Hotels</h3>       
+      <h3 id="hotels-closeby">Nearby Hotels</h3>        
       <ul id="places"></ul>       
-      <button id="more">More results</button> 
-    </div>  
-    
+      <button id="more">More results</button>   
+    </div>   
+         
      <!--------------jQuery container-->   
   
 <section class="details container">
   <button type="button" class="btn btn-secondary btn-lg btn-block hero-button">Get full location address</button> 
  
-  <div class="row">
  <div class="col-sm-12">
 
  <!---This div is used for jQuery Toggle element-for Full Address--->
  <div class="full-address">     
-          
- <!-- Display geolocation data -->   
-   <table class="table location-details" >
-         
+           
+    <div class="table-responsive"></div> 
+ 
+ <!-- Display geolocation data -->     
+   <table class="table location-details">  
+   <thead>         
   <tr>  
-    <th>Full Address</th> 
-    <th>Postal Code</th>   
-    <th>Country</th>        
-    <th>Latitude</th>    
-    <th>Longitude</th>  
-  </tr>  
-  <tr> 
+    <th>Full Address</th>  
+    <th>Postal Code</th>      
+    <th>Country</th>         
+    <th>Latitude</th> 
+    <th>Longitude</th>     
+  </tr>      
+   </thead> 
+   <tbody>
+  <tr>   
     <td><span id="location"></span></td>
     <td><span id="postal_code"></span></td>
     <td><span id="country"></span></td>
     <td><span id="lat"></span></td>  
-    <td><span id="lon"></span></td>   
+    <td><span id="lon"></span></td>     
   </tr> 
+   </tbody>
   </table>           
          
 </div>   
  </div>            
          
-</div> 
+
   <button onclick="window.location.reload();" class="refresh">refresh <i class="fa fa-refresh"></i></button>
  
 </section> 

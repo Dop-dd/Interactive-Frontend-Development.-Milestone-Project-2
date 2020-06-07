@@ -4,4 +4,6 @@ $(document).ready(function(){
     $(".full-address").toggle("slow");   
     });   
    
+    $("#lat").toFixed(3)
 });
+
