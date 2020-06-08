@@ -17,8 +17,8 @@
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCd097yoP0Le6Qa2-JctA8ZQSjq1UTEF60&libraries=places"></script>
 	<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
 
-        
-</head>                     
+       
+</head>                      
 <body>        
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <a href="index.html" class="navbar-brand">SleepOver <span><i class="fa fa-hotel"></i></span></a>
@@ -29,7 +29,7 @@
     <div id="map" class="container-fluid"></div>   
 
     <div id="right-panel">    
-      <h3 id="hotels-closeby">Nearby Hotels</h3>        
+      <h3 id="hotels-closeby">Nearby Hotels</h3>         
       <ul id="places"></ul>       
       <button id="more">More results</button>   
     </div>   
@@ -55,27 +55,60 @@
     <th>Country</th>         
     <th>Latitude</th> 
     <th>Longitude</th>     
-  </tr>      
-   </thead> 
+  </tr>          
+   </thead>     
    <tbody>
   <tr>   
     <td><span id="location"></span></td>
-    <td><span id="postal_code"></span></td>
+    <td><span id="postal_code"></span></td> 
     <td><span id="country"></span></td>
     <td><span id="lat"></span></td>  
     <td><span id="lon"></span></td>     
   </tr> 
    </tbody>
   </table>           
-         
-</div>   
- </div>            
-         
-
+                          
+</div>       
+ </div>                
+                       
   <button onclick="window.location.reload();" class="refresh">refresh <i class="fa fa-refresh"></i></button>
  
 </section> 
+<section class="corona-info container">
+<button type="button" class="btn btn-secondary btn-lg btn-block hero-button">Local current Covid update </button> 
+
+<div class="col-sm-12">
+
+<table>
+<tr>
+<th>Worldwide Cases</th>
+<th>Wordwide Deaths</th>	
+<th>Country</th>	
+<th>Population</th>	
+<th>Country Id</th>	
+<th>Last updated</th>	
+<th>Confirmed Cases</th>
+<th>Deaths</th>	
+</tr>
+
+<tr>
+<td> <span id="latest-all"></span></td>
+<td> <span id="deaths-all"></span></td>
+
+<td> <span id="country-name"></span></td>
+
+<td> <span id="country_population"></span></td>
+<td><span id="idd"></span></td>
+<td> <span id="last_updated"></span></td>
+<td> <span id="confirmed"></span></td>
+<td> <span id="deaths"></span></td>
+</tr>
+</table>
+
+</div>
+</section> 
      
+
 <!-- Footer -->
 <footer class="page-footer font-small blue container-fluid"> 
 
@@ -83,10 +116,11 @@
   <div class="footer-copyright text-center py-2 text-warning">© 2020 Copyright:
     <a href="index.html"> Antwerp SleepOver</a>
   </div>
-  <!-- End of Copyright -->       
-</footer>   
+  <!-- End of Copyright -->  
+
+</footer>    
             
-<!-- GooleMaps API Key-->           
+<!-- GooleMaps API Key-->       
 
 <!----  
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCd097yoP0Le6Qa2-JctA8ZQSjq1UTEF60&libraries=places&callback=initAutocomplete"
@@ -95,7 +129,9 @@
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCd097yoP0Le6Qa2-JctA8ZQSjq1UTEF60&libraries=places&callback=initMap" async defer></script>
 
-<script src="assets/js/map.js"></script>
+<script src="assets/js/map.js"></script> 
+
+
 
 </body>
-</html> 
+</html>      
