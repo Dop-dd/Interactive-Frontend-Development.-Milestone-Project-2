@@ -18,7 +18,7 @@
 	<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
 
        
-</head>                      
+</head>                        
 <body>        
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <a href="index.html" class="navbar-brand">SleepOver <span><i class="fa fa-hotel"></i></span></a>
@@ -31,9 +31,9 @@
     <div id="right-panel">    
       <h3 id="hotels-closeby">Nearby Hotels</h3>         
       <ul id="places"></ul>       
-      <button id="more">More results</button>   
+      <button id="more">More results</button>    
     </div>   
-         
+           
      <!--------------jQuery container-->   
   
 <section class="details container">
@@ -50,14 +50,14 @@
    <table class="table location-details">  
    <thead>         
   <tr>  
-    <th>Full Address</th>  
-    <th>Postal Code</th>      
+    <th>Full Address</th>      
+    <th>Postal Code</th>       
     <th>Country</th>         
     <th>Latitude</th> 
     <th>Longitude</th>     
   </tr>          
    </thead>     
-   <tbody>
+   <tbody> 
   <tr>   
     <td><span id="location"></span></td>
     <td><span id="postal_code"></span></td> 
@@ -67,19 +67,24 @@
   </tr> 
    </tbody>
   </table>           
-                          
+                             
 </div>       
  </div>                
                        
   <button onclick="window.location.reload();" class="refresh">refresh <i class="fa fa-refresh"></i></button>
  
 </section> 
+ 
+<!-- Display Covid-19 Stats -->   
+
 <section class="corona-info container">
 <button type="button" class="btn btn-secondary btn-lg btn-block hero-button">Local current Covid update </button> 
 
 <div class="col-sm-12">
 
-<table>
+<div class="table-responsive"></div> 
+
+<table class="table covid19-API">
 <tr>
 <th>Worldwide Cases</th>
 <th>Wordwide Deaths</th>	
@@ -103,9 +108,25 @@
 <td> <span id="confirmed"></span></td>
 <td> <span id="deaths"></span></td>
 </tr>
-</table>
+</table> 
 
 </div>
+ <h2>Location</h2>
+ 	<h2>name: <span id="name"></span></h2>
+ 	<h2>country: <span id="countryName"></span></h2>
+ 	<h2>location time: <span id="local-time"></span></h2>
+
+ 	<h2>current stats</h2>
+ 	
+ 	<h2>text: <span id="text"></span></h2>
+ 	<h2>temp: <span id="temp"></span></h2> 
+	<h2>pressure: <span id="pressure"></span></h2>
+	<h2>humidity: <span id="humidity"></span></h2>
+	<h2>wind speed: <span id="wind"></span></h2>
+
+	<h2>code: <span id="code"></span></h2> 	
+ 	<h2>visibility: <span id="visibility"></span></h2>
+
 </section> 
      
 
@@ -130,8 +151,6 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCd097yoP0Le6Qa2-JctA8ZQSjq1UTEF60&libraries=places&callback=initMap" async defer></script>
 
 <script src="assets/js/map.js"></script> 
-
-
 
 </body>
 </html>      
