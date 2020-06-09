@@ -14,120 +14,26 @@
     <script type="text/javascript" src="assets/js/script.js"></script>      
     
     <!-- GoogleMaps Places library -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCd097yoP0Le6Qa2-JctA8ZQSjq1UTEF60&libraries=places"></script>
+  <!--  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCd097yoP0Le6Qa2-JctA8ZQSjq1UTEF60&libraries=places"></script> -->
 	<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-
-       
+         
 </head>                        
-<body>        
+<body>         
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <a href="index.html" class="navbar-brand">SleepOver <span><i class="fa fa-hotel"></i></span></a>
                    
                 <input id="user-input" class="searchbox " type="text" placeholder="Enter search here">  
     </nav>  
-               
-    <div id="map" class="container-fluid"></div>   
+          
+    <!-- The slide-out panel for showing place details -->
+    <div id="panel"></div>
 
-    <div id="right-panel">    
-      <h3 id="hotels-closeby">Nearby Hotels</h3>         
-      <ul id="places"></ul>       
-      <button id="more">More results</button>    
-    </div>   
-           
-     <!--------------jQuery container-->   
-  
-<section class="details container">
-  <button type="button" class="btn btn-secondary btn-lg btn-block hero-button">Get full location address</button> 
- 
- <div class="col-sm-12">
+    <!-- Map comes in here -->    
+    <div id="map"></div>   
 
- <!---This div is used for jQuery Toggle element-for Full Address--->
- <div class="full-address">     
-           
-     
- <!-- Display geolocation data -->     
-   <table class="table location-details">  
-   <thead>    
-    <th>Full Address</th>      
-    <th>Postal Code</th>       
-    <th>Country</th>         
-    <th>Latitude</th> 
-    <th>Longitude</th>        
-           
-   </thead>     
-   <tbody>   
-  <tr>   
-
-    <td data-label="Full Address"><span id="location"></span></td>
-    <td data-label="Postal Code"><span id="postal_code"></span></td>
-    <td data-label=" Country"><span id="country"></span></td>
-    <td data-label="Latitude"><span id="lat"></span></td>
-    <td data-label="Longitude"><span id="lon"></span></td>
-
-    <!-- <td data-label="Full Address" id="location"></td>
-    <td data-label="Postal Code" id="postal_code"></td>
-    <td data-label=" Country" id="country"></td>
-    <td data-label="Latitude" id="lat"></td>
-    <td data-label=" Longitude" id="lon"></td> -->
-  
-    <!-- <td><span id="location"></span></td>
-    <td><span id="postal_code"></span></td> 
-    <td><span id="country"></span></td>
-    <td><span id="lat"></span></td>  
-    <td><span id="lon"></span></td>      -->
-  </tr> 
-   </tbody>
-  </table>           
-                             
-</div>       
- </div>                
-                       
-  <button onclick="window.location.reload();" class="refresh">refresh <i class="fa fa-refresh"></i></button>
- 
-</section> 
- 
-<!-- Display Covid-19 Stats -->   
-
-<section class="corona-info container">
-<button type="button" class="btn btn-secondary btn-lg btn-block hero-button">Local current Covid update </button> 
-
-<div class="col-sm-12">
-
-
-<table class="table covid19-API">
-<thead> 
-<tr>
-<th>Worldwide Cases</th>
-<th>Wordwide Deaths</th>	
-<th>Country</th>	
-<th>Population</th>	
-<th>Country Id</th>	
-<th>Last updated</th>	
-<th>Confirmed Cases</th>
-<th>Deaths</th>	
-</tr> 
-</thead> 
-  
-<tbody> 
-<tr>
-<td data-label="Worldwide Cases"><span id="latest-all"></span></td>
-<td data-label="Wordwide Deaths"><span id="deaths-all"></span></td>
-<td data-label="Country"> <span id="country-name"></span></td>
-<td data-label="Population"><span id="country_population"></span></td>
-<td data-label="Country Id"><span id="idd"></span></td>
-<td data-label="Country Id"><span id="last_updated"></span></td>
-<td data-label="Confirmed Cases"><span id="confirmed"></span></td>
-<td data-label="Deaths"><span id="deaths"></span></td>
-</tr>
-</tbody> 
-</table> 
-
-</div>
- 
-</section> 
      
  
-<!-- Footer -->
+ <!-- Footer -->
 <footer class="page-footer font-small blue container-fluid"> 
 
   <!-- Copyright -->
@@ -136,10 +42,10 @@
   </div>
   <!-- End of Copyright -->  
 
-</footer>    
-            
+</footer>     
+             
 <!-- GooleMaps API Key-->       
-
+  
 <!----  
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCd097yoP0Le6Qa2-JctA8ZQSjq1UTEF60&libraries=places&callback=initAutocomplete"
          async defer></script>
