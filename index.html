@@ -44,26 +44,37 @@
  <!---This div is used for jQuery Toggle element-for Full Address--->
  <div class="full-address">     
            
-    <div class="table-responsive"></div> 
- 
+     
  <!-- Display geolocation data -->     
    <table class="table location-details">  
-   <thead>         
-  <tr>  
+   <thead>    
     <th>Full Address</th>      
     <th>Postal Code</th>       
     <th>Country</th>         
     <th>Latitude</th> 
-    <th>Longitude</th>     
-  </tr>          
+    <th>Longitude</th>        
+           
    </thead>     
-   <tbody> 
+   <tbody>   
   <tr>   
-    <td><span id="location"></span></td>
+
+    <td data-label="Full Address"><span id="location"></span></td>
+    <td data-label="Postal Code"><span id="postal_code"></span></td>
+    <td data-label=" Country"><span id="country"></span></td>
+    <td data-label="Latitude"><span id="lat"></span></td>
+    <td data-label="Longitude"><span id="lon"></span></td>
+
+    <!-- <td data-label="Full Address" id="location"></td>
+    <td data-label="Postal Code" id="postal_code"></td>
+    <td data-label=" Country" id="country"></td>
+    <td data-label="Latitude" id="lat"></td>
+    <td data-label=" Longitude" id="lon"></td> -->
+  
+    <!-- <td><span id="location"></span></td>
     <td><span id="postal_code"></span></td> 
     <td><span id="country"></span></td>
     <td><span id="lat"></span></td>  
-    <td><span id="lon"></span></td>     
+    <td><span id="lon"></span></td>      -->
   </tr> 
    </tbody>
   </table>           
@@ -82,9 +93,9 @@
 
 <div class="col-sm-12">
 
-<div class="table-responsive"></div> 
 
 <table class="table covid19-API">
+<thead> 
 <tr>
 <th>Worldwide Cases</th>
 <th>Wordwide Deaths</th>	
@@ -94,42 +105,28 @@
 <th>Last updated</th>	
 <th>Confirmed Cases</th>
 <th>Deaths</th>	
-</tr>
-
+</tr> 
+</thead> 
+  
+<tbody> 
 <tr>
-<td> <span id="latest-all"></span></td>
-<td> <span id="deaths-all"></span></td>
-
-<td> <span id="country-name"></span></td>
-
-<td> <span id="country_population"></span></td>
-<td><span id="idd"></span></td>
-<td> <span id="last_updated"></span></td>
-<td> <span id="confirmed"></span></td>
-<td> <span id="deaths"></span></td>
+<td data-label="Worldwide Cases"><span id="latest-all"></span></td>
+<td data-label="Wordwide Deaths"><span id="deaths-all"></span></td>
+<td data-label="Country"> <span id="country-name"></span></td>
+<td data-label="Population"><span id="country_population"></span></td>
+<td data-label="Country Id"><span id="idd"></span></td>
+<td data-label="Country Id"><span id="last_updated"></span></td>
+<td data-label="Confirmed Cases"><span id="confirmed"></span></td>
+<td data-label="Deaths"><span id="deaths"></span></td>
 </tr>
+</tbody> 
 </table> 
 
 </div>
- <h2>Location</h2>
- 	<h2>name: <span id="name"></span></h2>
- 	<h2>country: <span id="countryName"></span></h2>
- 	<h2>location time: <span id="local-time"></span></h2>
-
- 	<h2>current stats</h2>
- 	
- 	<h2>text: <span id="text"></span></h2>
- 	<h2>temp: <span id="temp"></span></h2> 
-	<h2>pressure: <span id="pressure"></span></h2>
-	<h2>humidity: <span id="humidity"></span></h2>
-	<h2>wind speed: <span id="wind"></span></h2>
-
-	<h2>code: <span id="code"></span></h2> 	
- 	<h2>visibility: <span id="visibility"></span></h2>
-
+ 
 </section> 
      
-
+ 
 <!-- Footer -->
 <footer class="page-footer font-small blue container-fluid"> 
 
