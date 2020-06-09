@@ -68,7 +68,7 @@
       currentInfoWindow = infoWindow;
 
       // Call Places Nearby Search on the default location
-      getNearbyPlaces(pos);
+      getNearbyPlaces(my_location);
     }
 
     /* Perform a Places Nearby Search Request: Link at 
@@ -152,6 +152,48 @@
       while (infoPane.lastChild) {
         infoPane.removeChild(infoPane.lastChild);
       }
+
+      // Add the primary photo, if found: Examples at https://developers.google.com/places/web-service/photos
+      if (placeResult.photos) {
+        let firstPhoto = placeResult.photos[0];
+        let photo = document.createElement('img');
+        photo.classList.add('hero');
+        photo.src = firstPhoto.getUrl();
+        infoPane.appendChild(photo);
+      }
+
+      // Add place details with text formatting
+      let name = document.createElement('h1');
+      name.classList.add('place');
+      name.textContent = placeResult.name;
+      infoPane.appendChild(name);
+      if (placeResult.rating) {
+        let rating = document.createElement('p');
+        rating.classList.add('details');
+        rating.textContent = `Rating: ${placeResult.rating} \u272e`;
+        infoPane.appendChild(rating);
+      }
+
+      let address = document.createElement('p');
+      address.classList.add('details');
+      address.textContent = placeResult.formatted_address;
+      infoPane.appendChild(address);
+      if (placeResult.website) {
+        let websitePara = document.createElement('p');
+        let websiteLink = document.createElement('a');
+        let websiteUrl = document.createTextNode(placeResult.website);
+        websiteLink.appendChild(websiteUrl);
+        websiteLink.title = placeResult.website;
+        websiteLink.href = placeResult.website;
+        websitePara.appendChild(websiteLink);
+        infoPane.appendChild(websitePara);
+      }
+
+       // Open the infoPane
+      infoPane.classList.add("open");
+    }
+
+
 
 
 
