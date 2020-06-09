@@ -3,15 +3,13 @@
 body{
 	margin:0;
 	padding:0px;
-	
 }
-
-
 
 #map {
         height: 80%;
         margin-top: 5px;       
       }
+
       /* Makes the sample page fill the required window. */
 
 html, body {
@@ -20,117 +18,8 @@ html, body {
        padding: 0;
       }
 
-.navbar {
-    height: 100px;
-    width: 100%;
-    background-color: rgba(77, 74, 71, 0.89);
-    padding: 10px 10px;
-    margin-bottom: 5px;   
-}   
 
-
-/*********Locatio details*******************/
-
-.details {
-    height: 400px;
-    
-    margin: 30px 30px;
-    width: auto;
-    margin-left: auto;
-    margin-right: auto;    
-    /*background-color: #897E7B; */
-    
-}
-
-.location-details {
-        margin-top: 20px; 
-        width: 100%;
-        overflow: hidden; 
-        margin-left: auto;
-        margin-right: auto;  
-     
-        padding: 10px;
-        border-radius: 20px;        
-               
-     }
-
-
-     /*---------------------------------------------*/
-
-#right-panel {
-        font-family: 'Roboto','sans-serif';
-        line-height: 30px;
-        padding-left: 10px;
-      }
-
-      #right-panel select, #right-panel input {
-        font-size: 15px;
-      }
-
-      #right-panel select {
-        width: 100%;
-      }
-
-      #right-panel i {
-        font-size: 12px;
-      }
-
-      #right-panel {
-        font-family: Arial, Helvetica, sans-serif;
-        position: absolute;
-        left: 5px;
-        top: 33%;
-        margin-top: 2px;
-        height: 330px;
-        width: 200px;
-        padding: 5px;
-        z-index: 5;
-        border: 1px solid #999;
-        background: #fff;
-      }
-      
-      #hotels-closeby h3{
-        font-size: 14px;
-        margin: 0 0 5px 0;
-      }
-      #places  {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        height: 271px;
-        width: 200px;
-        overflow-y: scroll;
-      }
-      
-      #places li {
-        background-color: #fffbfb;;
-        padding: 10px;
-        
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-      }
-      li:nth-child(odd) {
-        background-color: #fcfcfc;
-      }
-
-      #more {
-        width: 100%;
-        margin: 5px 0 0 0;
-        background-color: rgba(77, 74, 71, 0.89);
-        color: #fff; 
-      }
-
-/*----------end of Map -----------*/
-
-#user-input {
-    position: absolute;
-    left: 40%;   
-    top: 50px;
-    width: 230px;
-    height: 30px;
-    border-radius: 18px;
-    }
+/*---------Navbar -----------*/
 
 .navbar-brand {
   font-size: 30px;
@@ -141,13 +30,80 @@ html, body {
     color: yellow;    
 }
 
-#hotels-closeby {
-    color: #897E7B;
-}
-
 .span-color {
     background-color: yellowgreen;
 }
+.navbar {
+    height: 100px;
+    width: 100%;
+    background-color: rgba(77, 74, 71, 0.89);
+    padding: 10px 10px;
+    margin-bottom: 5px;   
+}  
+
+/*-----End of Navbar -----------*/
+
+/**-----------Panel---------*/
+
+#panel {
+      height: 70%;
+      width: null;
+      background-color: white;
+      position: fixed;
+      z-index: 1;
+      overflow-x: hidden;
+      transition: all .2s ease-out;
+      margin-top: 10px;
+    }
+    
+    .open {
+      width: 250px;
+    }
+
+    /*--- for Place Details------ */
+
+    .hero {
+      width: 100%;
+      height: auto;
+      max-height: 166px;
+      display: block;
+    }
+
+    .place,
+    p {
+      font-family: 'open sans', arial, sans-serif;
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+
+    .details {
+      color: darkslategrey;
+    }
+
+    a {
+      text-decoration: none;
+      color: cadetblue;
+    }
+
+    /*----------End Map ---------------*/
+
+    /*---------Search Box---------------*/
+
+    #user-input {
+    position: absolute;
+    left: 40%;   
+    top: 10px;
+    width: 230px;
+    height: 30px;
+    border-radius: 18px;
+    }
+    
+     
+
+
+     
+
+
 
 
 /*----------------Buttons------------------*/
@@ -163,16 +119,17 @@ button.refresh {
   text-decoration: none;
   display: inline;
   font-size: 26px;
-  margin: 70px 20px;
+  margin: 70px 120px;
   cursor: pointer;
  transition: 0.3s;
  position: absolute;  
   left: 50%;
   -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-   
+  transform: translate(-50%, -50%);  
     
 }
+
+
 button.refresh:hover{
 	box-shadow: inset 10px 4px 18px #ec7728, inset 5px 5px 18px #4a4a4a;
 }
@@ -190,20 +147,26 @@ button.refresh:hover{
   margin-top: 20px;   
   text-decoration-style: none;
   font-size: 30px;     
-  height: 100px; 
+  height: 80px; 
   width: 100%;  
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 .full-address {
     display: none;
+}
+
+/*----------------Covid19 API-----------*/
+
+.corona-info {    
+    margin-top: 60px 100px;
 }
 
 /*------------------Footer-----------*/
 footer {
     height: 50px;
     background-color: rgba(77, 74, 71, 0.89);
-    position: relative;
-    margin-top: 30px;
+
+    margin-top: 130px;
    
 }
 
@@ -228,36 +191,13 @@ footer {
 	background-color: #f5f5f5;
 }
 
-
-/*---------------------- Social Links-------------*/
-/*
-@media screen and (max-width: 600px) {
-  table {
-    border: 0;
-    position: relative;
-    right: 30px;
-    border-collapse: collapse;
-    border-spacing: 0;
-      
-    font-size: 14px;
-    width: 90%; 
-    padding: 0px;
-    margin: 0;
-    flex-wrap: wrap;
-    
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
   }
-    
-       
- td {
-     display: table-row;
-  }
-
-  ::after, ::before {
-    box-sizing: 0px; 
-  } 
-
 }
-*/
+
 @media only screen and (max-width: 600px) { 
 
   #user-input {
@@ -292,12 +232,31 @@ footer {
     position: relative;
     right: 23px;
     border-radius: 0px;
+    height: 300px;
+    margin-top: 30px;
 }
+
+.location-details tr {
+         height: 100px;
+     }
+    
+    .corona-info {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+ }
+
+}
+
 
 
 /*------------Table-------------*/
 
-@media(max-width: 500px){
+@media screen and (max-width:632px) {
+
 	.table thead{
 		display: none;
 	}
@@ -324,12 +283,29 @@ footer {
 		font-weight: bold;
 		text-align: left;
 	}
-}
+   
+
+   
 
  footer {
-     margin-top: 130px;
+     position: absolute;
+     bottom: 90%;
  }
 
-}
+/*
+.location-details tr {
+         height: 40px;
+     }
+*/
 
+    button.refresh {
+    background-color: rgb(134, 90, 7); 
+  
+  margin: 100px 20px;
+  
+    }
+.hero-button { 
+  height: 80px; 
+  font-size: 22px;
+} 
 
