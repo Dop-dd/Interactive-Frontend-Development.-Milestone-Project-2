@@ -4,9 +4,8 @@ $(document).ready(function(){
   $(".hero-button").click(function(){
     $(".full-address").toggle("slow");   
     });   
+   });
    
-    $("#lat").toFixed(3)
-    });
 /*-----------Location Details End-------------*/
 
 
@@ -54,3 +53,60 @@ var idd =obj.locations[23].id;
 request.send();
 
 /*-----------Covid-19 Info End-------------*/
+
+
+/*-----------Weather API-------------*/
+
+link = "http://api.weatherapi.com/v1/current.json?key=%20ca056fcd55444d88b7065838200606&q=Antwerp/"
+
+var request = new XMLHttpRequest();
+request.open('GET',link,true);
+request.onload = function(){
+ var obj = JSON.parse(this.response);
+
+ 
+ document.getElementById('name').innerHTML = obj.location.name;
+ document.getElementById('countryName').innerHTML = obj.location.country; 
+ document.getElementById('local-time').innerHTML = obj.location.localtime;
+ 
+document.getElementById('text').innerHTML = obj.current.condition.text;
+ document.getElementById('temp').innerHTML = obj.current.temp_c;
+ document.getElementById('pressure').innerHTML = obj.current.pressure_mb;
+ document.getElementById('humidity').innerHTML = obj.current.humidity;
+ document.getElementById('wind').innerHTML = obj.current.wind_kph;
+
+ document.getElementById('visibility').innerHTML = obj.current.vis_km;
+ 
+ document.getElementById('code').innerHTML = obj.current.condition.code;
+  
+ 
+ document.getElementById('feelsLike').innerHTML = obj.current.condition.feelslike_c;
+
+ document.getElementById('icon').src = 	"//cdn.weatherapi.com/weather/64x64/day/113.png/"
+ 	+ obj.current.condition.icon + ".png";
+
+
+ if (request.status >= 200 && request.status < 400) {
+
+var name = obj.location.name;
+var country = obj.location.country; 
+ var time = obj.location.localtime;
+
+var text = obj.current.condition.text;
+ var temp_C = obj.current.temp_c;
+ var pressure = obj.current.pressure_mb;
+ var humidity = obj.current.humidity;
+  var wind = obj.current.wind_kph;
+
+  var visibility = obj.current.vis_km;
+
+ var code = obj.current.condition.code; 
+
+ var feels_like = obj.data.current_condition[0].FeelsLikeC;
+
+ }
+ else{
+  console.log("The city doesn't exist! Kindly check");
+ }
+}
+request.send();
