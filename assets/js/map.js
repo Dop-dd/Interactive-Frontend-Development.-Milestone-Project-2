@@ -120,10 +120,39 @@
         // Adjust the map bounds to include the location of this marker
         bounds.extend(place.geometry.location);
       });
-      /* Once all the markers have been placed, adjust the bounds of the map to
-       * show all the markers within the visible area. */
+      /*  adjust the bounds of the map to show all the markers within the visible area. */
       map.fitBounds(bounds);
     }
+
+    // Builds an InfoWindow to display details above the marker
+    function showDetails(placeResult, marker, status) {
+      if (status == google.maps.places.PlacesServiceStatus.OK) {
+        let placeInfowindow = new google.maps.InfoWindow();
+        let rating = "None";
+        if (placeResult.rating) rating = placeResult.rating;
+        placeInfowindow.setContent('<div><strong>' + placeResult.name +
+          '</strong><br>' + 'Rating: ' + rating + '</div>');
+        placeInfowindow.open(marker.map, marker);
+        currentInfoWindow.close();
+        currentInfoWindow = placeInfowindow;
+        showPanel(placeResult);
+      } else {
+        console.log('showDetails failed: ' + status);
+      }
+    }
+
+    // Displays place details in a sidebar
+    function showPanel(placeResult) {
+      // If infoPane is already open, close it
+      if (infoPane.classList.contains("open")) {
+        infoPane.classList.remove("open");
+      }
+
+      // Clear the previous details
+      while (infoPane.lastChild) {
+        infoPane.removeChild(infoPane.lastChild);
+      }
+
 
 
 
