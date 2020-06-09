@@ -31,18 +31,15 @@
     <!-- Map comes in here -->        
     <div id="map"></div>  
 
-    <section class="details container">
-  <button type="button" class="btn btn-secondary btn-lg btn-block hero-button">Get full location address</button> 
- 
+    <section class="details container corona-info">
+<button type="button" class="btn btn-secondary btn-lg btn-block hero-button">Live geographic Covid19 update</button>  
  <div class="col-sm-12">
 
  <!---This div is used for jQuery Toggle element-for Full Address--->
  <div class="covid-update">     
            
      
- <!-- Display Geographic Covid-19 live info -->      
-      
-
+ <!-- Display Geographic Covid-19 live info -->         
    
 <table class="table covid19-API">
 <thead> 
@@ -51,10 +48,10 @@
 <th>Wordwide Deaths</th>	
 <th>Country</th>	   
 <th>Population</th>	
-<th>Country Id</th>	
-<th>Last updated</th>	
+<th>Country Id</th>	         
+<th>Last updated</th>	  
 <th>Confirmed Cases</th>
-<th>Deaths</th>	
+<th>Deaths</th>	  
 </tr>  
 </thead> 
      
@@ -72,11 +69,9 @@
 </tbody> 
 </table> 
   
-</div> 
-<button onclick="window.location.reload();" class="refresh">refresh <i class="fa fa-refresh"></i></button>          
-                                
-</div>         
-                                    
+</div>                           
+</div>
+    <button onclick="window.location.reload();" class="refresh">refresh <i class="fa fa-refresh"></i></button>                                        
 </section>    
 
           

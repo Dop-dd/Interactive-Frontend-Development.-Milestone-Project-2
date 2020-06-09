@@ -48,8 +48,21 @@
         handleLocationError(false, infoWindow);
       } 
 
+      /*---------- --------Search Box-------------------------------------- */
+      var input = document.getElementById('pac-input');
+  var searchBox = new google.maps.places.SearchBox(input);
+    map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+        // Bias the SearchBox results towards current map's viewport.
+        map.addListener('bounds_changed', function() {
+          searchBox.setBounds(map.getBounds());
+        });       
+            
+      /*------------------------------------------------------------*/     
+
     }
 
+    
     // Handle a geolocation error
     function handleLocationError(browserHasGeolocation, infoWindow) {
       // Set my default location to ntwerp, Belgium

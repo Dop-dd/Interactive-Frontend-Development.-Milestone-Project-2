@@ -1,6 +1,7 @@
 
 
-link = "http://api.openweathermap.org/data/2.5/weather?q=Kortrijk&APPID=a94db86edd8f41368aaa7bb614031d6b&units=metric";
+
+/*link = "http://api.openweathermap.org/data/2.5/weather?q=Kortrijk&APPID=a94db86edd8f41368aaa7bb614031d6b&units=metric";
 
 var request = new XMLHttpRequest();
 request.open('GET',link,true);
@@ -29,4 +30,13 @@ request.onload = function(){
  }
 }
 request.send();
+
+ */
+
+// 444444444444
+
+// 444444444444444
+
+// 4444444444444
+
 
