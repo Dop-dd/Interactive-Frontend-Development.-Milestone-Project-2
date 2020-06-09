@@ -46,14 +46,14 @@ html, body {
 /**-----------Panel---------*/
 
 #panel {
-      height: 70%;
+      height: 60%;
       width: null;
       background-color: white;
       position: fixed;
       z-index: 1;
       overflow-x: hidden;
       transition: all .2s ease-out;
-      margin-top: 10px;
+      margin-top: 100px;
     }
     
     .open {
@@ -151,7 +151,7 @@ button.refresh:hover{
   width: 100%;  
   margin-bottom: 20px;
 }
-.full-address {
+.covid-update {
     display: none;
 }
 
@@ -163,10 +163,9 @@ button.refresh:hover{
 
 /*------------------Footer-----------*/
 footer {
-    height: 50px;
+    height: 90px;
     background-color: rgba(77, 74, 71, 0.89);
-
-    margin-top: 130px;
+    margin-top: 150px;
    
 }
 
@@ -191,8 +190,9 @@ footer {
 	background-color: #f5f5f5;
 }
 
+/*
 @media only screen and (max-width: 768px) {
-  /* For mobile phones: */
+  /* For mobile phones: */  /*
   [class*="col-"] {
     width: 100%;
   }
@@ -251,11 +251,44 @@ footer {
 
 }
 
+ */
 
 
-/*------------Table-------------*/
+/*------------Table-------------*//*
 
 @media screen and (max-width:632px) {
+
+    #panel {
+    height: 40%;
+     background-color: none;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: all .2s ease-out;
+    margin-top: 100px;
+    
+    font-size: 10px;
+    padding-left: 0px;
+    }
+
+ /*-----------User Input on Search Box------------*/
+    #user-input {
+    position: absolute;
+    left: 20%;
+    top: 65px;
+    width: 230px;
+    height: 30px;
+    border-radius: 18px;
+}
+
+ /*------------Logo------------*/
+    .navbar-brand {
+    font-size: 25px;
+    color: white;
+}
+
+
+    /*------------Table-------------*/
 
 	.table thead{
 		display: none;
@@ -283,13 +316,11 @@ footer {
 		font-weight: bold;
 		text-align: left;
 	}
-   
-
-   
+     
 
  footer {
-     position: absolute;
-     bottom: 90%;
+    position: relative;    
+    top: 20%;
  }
 
 /*
