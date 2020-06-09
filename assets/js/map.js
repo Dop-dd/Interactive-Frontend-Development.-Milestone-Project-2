@@ -50,6 +50,42 @@
 
     }
 
+    // Handle a geolocation error
+    function handleLocationError(browserHasGeolocation, infoWindow) {
+      // Set my default location to ntwerp, Belgium
+      my_location = {lat: 51.219, lng: 4.402};
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: my_location,
+        zoom: 13
+      });
 
-    
+      // Display an InfoWindow at the map center : Example at: https://developers.google.com/maps/documentation/javascript/geolocation
+      infoWindow.setPosition(my_location);
+      infoWindow.setContent(browserHasGeolocation ?
+        'Geolocation permissions denied. Using default location.' :
+        'Error: Your browser doesn\'t support geolocation.');
+      infoWindow.open(map);
+      currentInfoWindow = infoWindow;
+
+      // Call Places Nearby Search on the default location
+      getNearbyPlaces(pos);
+    }
+
+    /* Perform a Places Nearby Search Request: Link at 
+    https://developers.google.com/maps/documentation/javascript/examples/place-search: Requires the Places library
+    */
+
+    function getNearbyPlaces(position) {
+      let request = {
+        location: position,
+        rankBy: google.maps.places.RankBy.DISTANCE,
+        keyword: 'hotel'
+      };
+
+      service = new google.maps.places.PlacesService(map);
+      service.nearbySearch(request, nearbyCallback);
+    }
+
+
+
 
