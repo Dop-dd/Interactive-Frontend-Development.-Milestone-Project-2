@@ -20,7 +20,7 @@
 </head>                        
 <body>         
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a href="index.html" class="navbar-brand">SleepOver <span><i class="fa fa-hotel"></i></span></a>
+        <a href="index.html" class="navbar-brand">SleepOver <span><i class="fa fa-hotel"></i><br>InAntwerp</span></a>
                    
                 <input id="user-input" class="searchbox " type="text" placeholder="Enter search here">  
     </nav>  
@@ -29,33 +29,34 @@
     <div id="panel"></div>
 
     <!-- Map comes in here -->        
-    <div id="map"></div>  
-
+    <div id="map"></div>   
+ 
     <section class="details container corona-info">
-<button type="button" class="btn btn-secondary btn-lg btn-block hero-button">Live geographic Covid19 update</button>  
+    <h2 id="details-header">Find a hotel in Antwerp</h2>
+    <h5 id="sub-header">Or allow geolocation to find hotels within your current location!</h5>
+<button type="button" class="btn btn-secondary btn-lg btn-block hero-button"><sup>while in Belgium!</sup>  Live geographic Covid19 update</button>  
  <div class="col-sm-12">
 
  <!---This div is used for jQuery Toggle element-for Full Address--->
- <div class="covid-update">     
-           
+ <div class="covid-update">                      
      
  <!-- Display Geographic Covid-19 live info -->         
    
 <table class="table covid19-API">
-<thead> 
-<tr>
-<th>Worldwide Cases</th>
-<th>Wordwide Deaths</th>	
+<thead>        
+<tr> 
+<th>Worldwide Cases</th> 
+<th>Wordwide Deaths</th>	  
 <th>Country</th>	   
 <th>Population</th>	
-<th>Country Id</th>	         
+<th>Country Id</th>	                 
 <th>Last updated</th>	  
 <th>Confirmed Cases</th>
 <th>Deaths</th>	  
 </tr>  
-</thead> 
+</thead>          
      
-<tbody> 
+<tbody>    
 <tr>
 <td data-label="Worldwide Cases"><span id="latest-all"></span></td>
 <td data-label="Wordwide Deaths"><span id="deaths-all"></span></td>
@@ -73,20 +74,19 @@
 </div>
     <button onclick="window.location.reload();" class="refresh">refresh <i class="fa fa-refresh"></i></button>                                        
 </section>    
-
-          
  
+                
  <!-- Footer -->
 <footer class="page-footer font-small blue container-fluid"> 
 
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-2 text-warning">© 2020 Copyright:
-    <a href="index.html"> Antwerp SleepOver</a>
+  <div class="footer-copyright text-center pt-4 text-warning h5">© 2020 Copyright:
+    <a href="index.html"> SleepOver InAntwerp </a>
   </div>
   <!-- End of Copyright -->  
 
 </footer>     
-             
+                         
 <!-- GooleMaps API Key-->       
   
 <!----  
