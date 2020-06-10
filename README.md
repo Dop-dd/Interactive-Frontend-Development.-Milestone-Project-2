@@ -86,3 +86,38 @@ This projet is built using HTML, CSS and Bootstrap
 - JSON  
   - It is used with JavaScript to make requests to the Covid-19 API for live updates
   - Link: https://www.w3schools.com/JS/js_json_html.asp
+
+
+## Testing
+
+
+## Deployment
+
+The code consist of a single page website in HTML, CSS, Bootstrap, JavaScript and jQuery and does not contain any executable file.
+
+## Credits
+
+### Content
+
+- Tips for map on the home page where taken and edited from:
+  - https://developers.google.com/maps/gmp-get-started
+  - https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete
+  - https://developers.google.com/maps/documentation/javascript/examples/rectangle-event
+  - https://developers.google.com/maps/documentation/javascript/markers
+  - https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete
+  - https://developers.google.com/maps/documentation/javascript/examples/place-details
+  - https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-addressform
+  
+  
+- The link for the Covid-19 API update is taken from:
+  - https://coronavirus-tracker-api.herokuapp.com/v2/locations/
+  
+  
+### Media
+  
+- The images on the side panel are taken directly from google maps
+  - https://developers.google.com/maps/gmp-get-started
+
+
+### Acknowledgements
+- I received inspiration for this project from AirBnB
