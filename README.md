@@ -1,39 +1,26 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+# SleepOver InAntwerp
 
-Welcome Dop-dd,
+ The concept behind SleepOver InAntwerp is to help tourists or jst about anyone planning to visit Antwerp find accomodation easily. 
+ We underatnd that sometimes one might find themselves not initially planned. We could be visiting a nearby city and decide to pop 
+ in to Antwerp or we could also just be driving through the the city and decide to make a stop.
+ There're variuous reasons why one might need hotel without any prior reservation.
+ 
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project.
+ ## UX
 
-## Gitpod Reminders
+This project is for anyone looking for hotel to rent.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+- As a user I want to look for a hotel to rent.
+- By becoming a member, I can benefit from the monthly sessions organised by Saladlane to try oout different salad dishes and        flavours.
 
-`python3 -m http.server`
+- As a user I want to be able to discover new and interesting places.
+  - As a user I want to be recommended hotels based on my chosen destination
+  - As a user I want to be recommended hotels no more than 20 hotels within a specific area
+  
+- As a user I want use to a website that gives me the opportunity to see a short description of each hotel
+  - As a user  i want to be recommended well known hotels registered on the Google Maps 
+  - As a user I want to able to explore a several hotels so I can make a selection
 
-A blue button should appear to click: *Make Public*,
-
-Another blue button should appear to click: *Open Browser*.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: *Make Public*,
-
-Another blue button should appear to click: *Open Browser*.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the backend lessons.
-
-## Updates Since The Instructional Video
-
-We continually tweak and adjust this template to help give you the best experience. Here are the updates since the original video was made:
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
---------
-
-Happy coding!
+- As a user I want to be able to create a Geolocation experience by actually clcking on a hotel link
+  - As a user I want to be recommended hotels options based on my current location using latitude and longitude
+  - As a user I want to be able to decline the Geolocation service and be shown hotels in a diferent location
