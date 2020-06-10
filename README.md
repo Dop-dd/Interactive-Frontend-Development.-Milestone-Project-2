@@ -42,3 +42,47 @@ The website is made up of a single page.
 - Responsiveness:
   - The website is developed with the notion of mobile-first and is thus, fully reponsible.
 - The website is intuitive and the content is relevant 
+
+
+### Existing Features
+
+- Geolocation accept notification- A user can accept notifiation and then request for search results based on their current location
+- Geolocation decline notification- A user can decline Geolocationrequest and be taken to the exact coordinates where the map is centered                        -
+- Covid-19 API- A user can get live update about the Corona virus while in Belgium.
+- Referesh button- User can click on this button to refresh the API updates or the entire page 
+
+### Features left to implement
+
+In the future we plan to include booking forms
+
+
+## Technology used
+This projet is built using HTML, CSS and Bootstrap
+
+- HTML 
+  - Html is used the defacto language for the web pages
+  - Link: https://www.w3schools.com/html/default.asp
+  
+- CSS
+  - CSS is implemented for styling and layout.
+  - Link: https://www.w3schools.com/css/default.asp
+    
+- BootStrap Framework
+  - Bootstrap is to make this website responsive and mobile-first websites. Theframework includes HTML and CSS based design templates to help design websites faster and easier. It The Header, Body and Footer are all in Bootstrap containers which creates a very responsive effect on the entire website
+  - Link: https://getbootstrap.com/
+
+- jQuery
+  - jQuery is implemented for toggling the Covid-19 API hero button.
+  - Link: https://jquery.com/
+
+- Google Maps
+  - Google Maps is implemented for Geolocation.
+  - Link: https://developers.google.com/maps/gmp-get-started
+
+- JavaScript
+  - JavaScript is implemented used to call and display the map.  
+  - Link: https://www.w3schools.com/js/
+
+- JSON  
+  - It is used with JavaScript to make requests to the Covid-19 API for live updates
+  - Link: https://www.w3schools.com/JS/js_json_html.asp
