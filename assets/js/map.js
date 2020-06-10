@@ -1,12 +1,6 @@
     /*--------Create variables--------*/
     
-    let my_location;
-    let map;
-    let bounds;
-    let infoWindow;
-    let currentInfoWindow;
-    let service;
-    let infoPane;
+    let my_location, map, bounds, infoWindow, currentInfoWindow, service, infoPane;
 
     function initMap() {      
       // Initialize variables

@@ -24,6 +24,7 @@ html, body {
 .navbar-brand {
   font-size: 30px;
   color: white;
+  line-height: 0.8;
 }
 
 .fa {
@@ -78,6 +79,7 @@ html, body {
 
     .details {
       color: darkslategrey;
+      margin-top: 20px;
     }
 
     a {
@@ -91,11 +93,11 @@ html, body {
 
     #user-input {
     position: absolute;
-    left: 40%;   
-    top: 10px;
-    width: 230px;
-    height: 30px;
-    border-radius: 18px;
+    left: 46%;   
+    top: 50%;
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
     }
     
      
@@ -123,7 +125,7 @@ button.refresh {
   cursor: pointer;
  transition: 0.3s;
  position: absolute;  
-  left: 50%;
+  left: 45%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);  
     
@@ -131,7 +133,7 @@ button.refresh {
 
 
 button.refresh:hover{
-	box-shadow: inset 10px 4px 18px #ec7728, inset 5px 5px 18px #4a4a4a;
+	box-shadow: inset 10px 4px 18px #ec7728, inset 5px 5px 18px #a2c4eb;
 }
 
 /*-------Hero Button------*/
@@ -144,10 +146,10 @@ button.refresh:hover{
   padding: 4px;
   position:relative;  
   bottom: 10px;
-  margin-top: 20px;   
+  margin-top: 40px;   
   text-decoration-style: none;
-  font-size: 30px;     
-  height: 80px; 
+  font-size: 25px;     
+  height: 60px; 
   width: 100%;  
   margin-bottom: 20px;
 }
@@ -155,18 +157,38 @@ button.refresh:hover{
     display: none;
 }
 
+sup {
+    color: yellow;
+    
+}
+
+
 /*----------------Covid19 API-----------*/
 
 .corona-info {    
-    margin-top: 60px 100px;
+    margin-top: 60px 50px;
+}
+
+#details-header {
+    color: gray;
+    text-align: center;
+}
+
+ #sub-header {
+    text-align: center;
+    color: orange;
 }
 
 /*------------------Footer-----------*/
 footer {
-    height: 90px;
+    height: 75px;
     background-color: rgba(77, 74, 71, 0.89);
     margin-top: 150px;
    
+}
+
+footer a {
+    color: #fff;
 }
 
 /*---------------------Table -------------*/
@@ -254,7 +276,7 @@ footer {
  */
 
 
-/*------------Table-------------*//*
+/*------------Table-------------*/
 
 @media screen and (max-width:632px) {
 
@@ -274,16 +296,18 @@ footer {
  /*-----------User Input on Search Box------------*/
     #user-input {
     position: absolute;
-    left: 20%;
-    top: 65px;
-    width: 230px;
-    height: 30px;
-    border-radius: 18px;
+    left: 43%;
+    top: 35px;
+    width: 190px;
+    height: 35px;
+    border-radius: 14px;
 }
 
- /*------------Logo------------*/
+
+
+ /*------------Table-------------*/
     .navbar-brand {
-    font-size: 25px;
+    font-size: 20px;
     color: white;
 }
 
@@ -320,7 +344,6 @@ footer {
 
  footer {
     position: relative;    
-    top: 20%;
  }
 
 /*
@@ -329,14 +352,34 @@ footer {
      }
 */
 
-    button.refresh {
-    background-color: rgb(134, 90, 7); 
-  
-  margin: 100px 20px;
-  
-    }
+button.refresh {
+    background-color: rgb(134, 90, 7);
+    margin: top;
+    margin-top: 50px;
+    border-radius: 18px;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;    
+    font-size: 17px;
+    /* margin: 70px 120px; */
+    cursor: pointer;
+    transition: 0.3s;
+    
+    left: 20%;
+}
+
 .hero-button { 
   height: 80px; 
   font-size: 22px;
-} 
+    } 
 
+    #details-header {
+    color: gray;
+    text-align: center;
+    font-size: 1.5rem;
+}
+    #sub-header {
+    font-size: 1rem;
+
+}
