@@ -90,6 +90,25 @@ This projet is built using HTML, CSS and Bootstrap
 
 ## Testing
 
+1. Site Navifation:
+   1. This is a single page website. The link s work as intended.
+   2. clicking on the logo refreshes the home page.
+
+2. Map:
+   1. Open the page, Accept the notication from google and be shown hotels within you location. 
+   2. The exact user location is also indicated on the map as 'location found'.
+   3. Decline notificatio- The maps displays hotels in the centered location in Antwerp.
+
+3. Markers: 
+   1. Click on a marker on the map. This content apperas on a panel fixed to the left of the page
+   2. Click on a link on the left pane and be taken to the hotel website.
+
+4. Covid API:
+   1. Click on the 'Live geographic Covid update' button
+   2. The button toggles a table with updates about covid-19 in the area 
+   3. Click on the button to toggle off the display
+   4. Click on the 'refresh' button to efresh the API feed  
+
 
 ## Deployment
 
@@ -110,7 +129,7 @@ The code consist of a single page website in HTML, CSS, Bootstrap, JavaScript an
   
   
 - The link for the Covid-19 API update is taken from:
-  - https://coronavirus-tracker-api.herokuapp.com/v2/locations/
+  - https://www.programmableweb.com/coronavirus-covid-19
   
   
 ### Media
