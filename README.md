@@ -1,6 +1,6 @@
 # SleepOver InAntwerp
 
- The concept behind SleepOver InAntwerp is to help tourists or jst about anyone planning to visit Antwerp find accomodation easily. 
+ The concept behind SleepOver InAntwerp is to help tourists or just about anyone planning to visit the city of Antwerp to find accomodation easily. 
  We underatnd that sometimes one might find themselves not initially planned. We could be visiting a nearby city and decide to pop 
  in to Antwerp or we could also just be driving through the the city and decide to make a stop.
  There're variuous reasons why one might need hotel without any prior reservation.
@@ -11,19 +11,19 @@
 This project is for anyone looking for hotel to rent.
 
 - As a user I want to look for a hotel to rent.
-- By becoming a member, I can benefit from the monthly sessions organised by Saladlane to try oout different salad dishes and        flavours.
+- As a user, I can benefit from the hotel pagination search to see different within the area.
 
 - As a user I want to be able to discover new and interesting places.
   - As a user I want to be recommended hotels based on my chosen destination
-  - As a user I want to be recommended hotels no more than 20 hotels within a specific area
+  - As a user I want to be recommended several hotels within a specific area
   
 - As a user I want use to a website that gives me the opportunity to see a short description of each hotel
   - As a user  i want to be recommended well known hotels registered on the Google Maps 
   - As a user I want to able to explore a several hotels so I can make a selection
 
-- As a user I want to be able to create a Geolocation experience by actually clcking on a hotel link
-  - As a user I want to be recommended hotels options based on my current location using latitude and longitude
-  - As a user I want to be able to decline the Geolocation service and be shown hotels in a diferent location
+- As a user I want to be able to create a Search experience by performing a manual search of my choice
+  - As a user I want to be recommended hotels options based on my current location 
+  - As a user I want to be able to search for any location or anything  and be given the exact address and location coordinates
 
 
 ## Features
@@ -34,11 +34,11 @@ The website is made up of a single page.
 - Visuals: 
   - The map is clear and properly set at the top of the page. It occupies 80% of the view height.
 - Panel: 
-   - A panel on the left of the page that gives visitors a bit more information about a clicked marker on the map 
+   - A panel on the left of the page that gives visitors the address of the searched discovered locations 
 - Covid Update:
   - Users can click on the button to get live update of the Corona pandemic in Belgium
 - Google map:
-  - The map serves a location finder. Users can search for hotels in Awnterp or use Geolocation to find nearby hotels 
+  - The map serves a location finder. Users can search for hotels in Awnterp or use the search box to find other services and automatically get exact address 
 - Responsiveness:
   - The website is developed with the notion of mobile-first and is thus, fully reponsible.
 - The website is intuitive and the content is relevant 
@@ -46,8 +46,8 @@ The website is made up of a single page.
 
 ### Existing Features
 
-- Geolocation accept notification- A user can accept notifiation and then request for search results based on their current location
-- Geolocation decline notification- A user can decline Geolocationrequest and be taken to the exact coordinates where the map is centered                        -
+- Geolocation is centered for the city of Antwerp- A user can click on the more button and use pagination to to get more search results 
+- Search box- A user can perform a manual search by using the search box and be taken to the exact address and coordinates of the searched results                      -
 - Covid-19 API- A user can get live update about the Corona virus while in Belgium.
 - Referesh button- User can click on this button to refresh the API updates or the entire page 
 
@@ -68,7 +68,7 @@ This projet is built using HTML, CSS and Bootstrap
   - Link: https://www.w3schools.com/css/default.asp
     
 - BootStrap Framework
-  - Bootstrap is to make this website responsive and mobile-first websites. Theframework includes HTML and CSS based design templates to help design websites faster and easier. It The Header, Body and Footer are all in Bootstrap containers which creates a very responsive effect on the entire website
+  - Bootstrap is to make this website responsive and mobile-first websites. The framework includes HTML and CSS based design templates to help design websites faster and easier. It The Header, Body and Footer are all in Bootstrap containers which creates a very responsive effect on the entire website
   - Link: https://getbootstrap.com/
 
 - jQuery
@@ -95,13 +95,14 @@ This projet is built using HTML, CSS and Bootstrap
    2. clicking on the logo refreshes the home page.
 
 2. Map:
-   1. Open the page, Accept the notication from google and be shown hotels within you location. 
-   2. The exact user location is also indicated on the map as 'location found'.
-   3. Decline notificatio- The maps displays hotels in the centered location in Antwerp.
+   1. Open the page, a few search results appear automatically.
+   2. The clicks on the more button and uses pagiation to get more esults.
+   3. Searc box- Enter a search manually  and be use the autoComplete option to select choose a service, building or location.
+   4. The exact formatted address along with the coordinates of the location are shown in a table below the map.
 
 3. Markers: 
-   1. Click on a marker on the map. This content apperas on a panel fixed to the left of the page
-   2. Click on a link on the left pane and be taken to the hotel website.
+   1. Mouse on a marker on the map. This name of the hotel or service is shown in a amal dialog box
+   2. Click on a POI to reveal detailed information about it.
 
 4. Covid API:
    1. Click on the 'Live geographic Covid update' button
