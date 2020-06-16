@@ -172,15 +172,28 @@ footer a {
 /*-------------------Media Queries -----------------*/
 
 @media screen and (max-width: 632px) {
+
+    #map {
+    height: 80%;
+    margin-top: 3px;
+}
   
   /*------User Input on Search Box-------*/
-  #searchInput {
-  
+  #searchInput {  
     left: 8%;
     margin-bottom: 5px;
     width: 300px;
     height: 35px;
     border-radius: 14px;
+  }
+
+/*----------Details Header------------*/
+  #details-header {
+    color: orangered;
+    text-align: center;
+    position: absolute;
+    top: 10%;
+    left: 23%;
   }
 
   /*------------Table-------------*/
