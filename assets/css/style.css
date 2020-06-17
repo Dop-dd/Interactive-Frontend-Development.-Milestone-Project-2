@@ -83,9 +83,9 @@ header {
   font-family: Arial, Helvetica, sans-serif;
   position: absolute;
   left: 5px;
-  top: 35%;
+  top: 40%;
   margin-top: 2px;
-  height: 330px;
+  height: 350px;
   width: 250px;
   padding: 5px;
   z-index: 5;
@@ -96,11 +96,11 @@ h2 {
   font-size: 22px;
   margin: 0 0 5px 0;
 }
-ul {
+#places {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  height: 271px;
+  height: 290px;
   width: 200px;
   overflow-y: scroll;
 }
