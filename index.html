@@ -26,68 +26,70 @@
 
     <script type="text/javascript" src="assets/js/script.js"></script>
 
-    <!-- GoogleMaps Places library --> 
+    <!-- GoogleMaps Places library -->
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-  </head>            
+  </head>
   <body>
-  <header>   
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <a href="index.html" class="navbar-brand"
-        >SleepOver <span><i class="fa fa-hotel"></i><br />InAntwerp</span></a>           
-                </nav> 
-    <h2 id="details-header">Find a hotel in Antwerp</h2>
-    
-  </header>  
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a href="index.html" class="navbar-brand"
+          >SleepOver <span><i class="fa fa-hotel"></i><br />InAntwerp</span></a>
+      </nav>
+
+      <h2 id="details-header">Find a hotel in Antwerp</h2>
+    </header>
+
     <!-- The slide-out panel for showing place details -->
-  
-<div id="panel"> 
-      <h2>Nearby Hotels</h2>   
+    <div id="panel">
+      <h2>Nearby Hotels</h2>
       <ul id="places"></ul>
-      <button id="more">More results</button>   
-    </div>      
-    
+      <button id="more">More results</button>
+    </div>
+
     <!-- Map comes in here -->  
-    <div id="map"></div>   
-             
-     <!-- Display geolocation data -->  
+    <div id="map"></div>          
 
-<section class="container geo-data">
-<input id="searchInput" class="controls" type="text" placeholder="Enter a location">
-<p class="text">Get the address of a searched location!</p>
+    <!-- Display geolocation data -->
+    <section class="container geo-data">
+      <input
+        id="searchInput"
+        class="controls"
+        type="text"
+        placeholder="Enter a location"
+      />
+      <p class="text">Get the address of a searched location!</p>
 
+      <table class="table covid19-API">
+        <thead>
+          <tr>
+            <th>Full Address</th>
+            <th>Post Code</th>
+            <th>Land</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+          </tr>
+        </thead>
 
-    <table class="table covid19-API">
-            <thead>
-              <tr>        
-                <th>Full Address</th>
-                <th>Post Code</th>
-                <th>Land</th>
-                <th>Latitude</th>
-                <th>Longitude</th>                  
-              </tr>   
-            </thead>                    
-    
-            <tbody>   
-              <tr>
-                <td data-label="Full Address">
-                  <span id="location"></span>
-                </td>
-                <td data-label="Post Code">
-                  <span id="postal_code"></span>
-                </td>
-                <td data-label="Land"><span id="country"></span></td>
+        <tbody>
+          <tr>
+            <td data-label="Full Address">
+              <span id="location"></span>
+            </td>
+            <td data-label="Post Code">
+              <span id="postal_code"></span>
+            </td>
+            <td data-label="Land"><span id="country"></span></td>
 
-                <td data-label="Latitude">
-                  <span id="latt"></span>
-                </td>
+            <td data-label="Latitude">
+              <span id="latt"></span>
+            </td>
 
-                <td data-label="Longitude"><span id="long"></span></td>                
-              </tr>
-            </tbody>
-          </table>
-          </section>                           
-
-    <!-- End of Table -->      
+            <td data-label="Longitude"><span id="long"></span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <!-- End of Table -->
 
     <!-- Footer -->
     <footer class="page-footer font-small blue container-fluid">
@@ -100,7 +102,6 @@
     <!-- End of Footer -->
 
     <!-- GooleMaps API Key-->
-
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCd097yoP0Le6Qa2-JctA8ZQSjq1UTEF60&libraries=places&callback=initMap"
       async
@@ -110,4 +111,3 @@
     <script src="assets/js/map.js"></script>
   </body>
 </html>
- 
