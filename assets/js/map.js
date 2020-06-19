@@ -1,136 +1,131 @@
-/**----Google Maps locator------------ */
-var map;
+
 
 function initMap() {
-  // Create the map.
-  var pyrmont = { lat: 51.2194, lng: 4.4025 };
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: pyrmont,
-    zoom: 17
-  });
 
-  // Create the places service.
-  var service = new google.maps.places.PlacesService(map);
-  var getNextPage = null;
-  var moreButton = document.getElementById('more');
-  moreButton.onclick = function () {
-    moreButton.disabled = true;
-    if (getNextPage) getNextPage();
-  };
+  var brussel = {
+    info:
+      `<h5>SleepOver Brussels</h5>
+        <p>Our 4 star hotel is only a two-minute<br>\
+        walk from the famous Place de la Loi.</p>        
+        <p><img src="https://images.pexels.com/photos/1579739/pexels-photo-1579739.jpeg?
+        cs=srgb&dl=empty-dining-tables-and-chairs-1579739.jpg&fm=jpg" width="180" height="100"></p>
+        Address: Steenstraat 40<br> Brussels, 1050.
+        <a href="https://www.google.be/maps/@50.8100608,3.343327,14z" target="_blank">Get Directions</a>`,
 
-  // Perform a nearby search.
-  var input = document.getElementById('searchInput');
-  
-  service.nearbySearch(
-    { location: pyrmont, radius: 500, type: ['metro'] },
-    function (results, status, pagination) {
-      if (status !== 'OK') return;
-
-      createMarkers(results);
-      moreButton.disabled = !pagination.hasNextPage;
-      getNextPage = pagination.hasNextPage && function () {
-        pagination.nextPage();
-      };
-    });
-/*------ Auto complete--Example code at: 
-https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-hotelsearch */
-
-  var autocomplete = new google.maps.places.Autocomplete(input);
-  autocomplete.bindTo('bounds', map);
-
-  var infowindow = new google.maps.InfoWindow();
-  var marker = new google.maps.Marker({
-    map: map,
-    anchorPoint: new google.maps.Point(0, -29)
-  });
-
-  /* Add Listener event. Code from https://developers.google.com/maps/documentation/javascript/events */
-
-  autocomplete.addListener('place_changed', function () {
-    infowindow.close();
-    marker.setVisible(false);
-    var place = autocomplete.getPlace();
-    if (!place.geometry) {
-      window.alert("Autocomplete's returned place contains no geometry");
-      return;
-    }
-    // If the place has a geometry, then present it on a map.
-    if (place.geometry.viewport) {
-      map.fitBounds(place.geometry.viewport);
-    } else {
-      map.setCenter(place.geometry.location);
-      map.setZoom(17);
-    }
-    marker.setIcon(({
-      url: place.icon,
-      size: new google.maps.Size(71, 71),
-      origin: new google.maps.Point(0, 0),
-      anchor: new google.maps.Point(17, 34),
-      scaledSize: new google.maps.Size(35, 35)
-    }));
-    
-    marker.setPosition(place.geometry.location);
-    marker.setVisible(true);
-
-
-    var address = '';
-    if (place.address_components) {
-      address = [
-        (place.address_components[0] && place.address_components[0].short_name || ''),
-        (place.address_components[1] && place.address_components[1].short_name || ''),
-        (place.address_components[2] && place.address_components[2].short_name || '')
-      ].join(' ');
-    }
-
-    infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
-    infowindow.open(map, marker);
-
-    infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
-    infowindow.open(map, marker);
-
-    // Location details  Example code from : https://developers.google.com/maps/documentation/javascript/places
-    for (var i = 0; i < place.address_components.length; i++) {
-      if (place.address_components[i].types[0] == 'postal_code') {
-        document.getElementById('postal_code').innerHTML = place.address_components[i].long_name;
-      }
-      if (place.address_components[i].types[0] == 'country') {
-        document.getElementById('country').innerHTML = place.address_components[i].long_name;
-      }
-    }
-    document.getElementById('location').innerHTML = place.formatted_address;
-    document.getElementById('latt').innerHTML = place.geometry.location.lat();
-    document.getElementById('long').innerHTML = place.geometry.location.lng();
-  });
-
-}
-
-function createMarkers(places) {
-  var bounds = new google.maps.LatLngBounds();
-  var placesList = document.getElementById('places');
-
-  for (var i = 0, place; place = places[i]; i++) {
-    var image = {
-      url: place.icon,
-      size: new google.maps.Size(71, 71),
-      origin: new google.maps.Point(0, 0),
-      anchor: new google.maps.Point(17, 34),
-      scaledSize: new google.maps.Size(25, 25)
-    };
-
-    var marker = new google.maps.Marker({
-      map: map,
-      icon: image,
-      title: place.name,
-      position: place.geometry.location
-    });
-
-    var li = document.createElement('li');
-    li.textContent = place.name;
-    placesList.appendChild(li);
-
-    bounds.extend(place.geometry.location);
+    lat: 50.830,
+    long: 4.330,
   }
-  map.fitBounds(bounds);
+
+  var antwerp = {
+    info:
+      `<h5>SleepOver Antwerp</h5><br>\
+       <p>This 4 star hotel is located near <br>\
+       Centrale train station, metro and buses.</p>
+         <p><img src="https://images.pexels.com/photos/756083/pexels-photo-756083.jpeg?
+         cs=srgb&dl=photo-of-plants-near-the-glass-door-756083.jpg&fm=jpg" width="180" height="100"></p>
+    	Address: Hoogstraat 201<br> Antwerp, 2000.<br>\
+    	<a href="https://www.google.be/maps/@50.8100608,3.343327,14z" target="_blank">Get Directions</a>`,
+
+    lat: 51.220,
+    long: 4.420,
+  }
+
+  var brugge = {
+    info:
+      `<h5> SleepOver Brugge</h5><br>\
+       <p>Our branch is Brugge is merely a 5 minute <br>\
+       walk from the Bell Tower. Excellent view.</p>
+       <p><img src="https://images.pexels.com/photos/635041/pexels-photo-635041.jpeg?
+       cs=srgb&dl=brown-coffee-table-surrounded-by-four-chairs-635041.jpg&fm=jpg" width="180" height="100"></p>
+    	Address: BellStraat 61<br> Brugge, 8700.<br>\
+    	<a href="https://www.google.be/maps/@50.8100608,3.343327,14z" target="_blank">Get Directions</a>`,
+
+    lat: 51.220,
+    long: 3.230,
+  }
+
+  var kortrijk = {
+    info:
+     `<h5> SleepOver Kortijk</h5><br>\
+       <p>This guest house offers comfort and privacy <br>\
+        A Peaceful and Tranquil Home away from Home</p>
+       <p><img src="https://images.pexels.com/photos/584399/living-room-couch-interior-room-584399.jpeg?
+       cs=srgb&dl=brown-wooden-center-table-584399.jpg&fm=jpg" width="180" height="100"></p>
+    	Address: Tienstraat 25<br> Kortrijk, 8500.<br>\
+    	<a href="https://www.google.be/maps/@50.8100608,3.343327,14z" target="_blank">Get Directions</a>`,
+
+    lat: 50.830,
+    long: 3.270,
+  }
+
+  var gent = {
+    info:
+      nfo:
+     `<h5> SleepOver Gent</h5><br>\
+       <p>This deluxe guest house is located in a new <br>\
+        layout in the outskirts of gent.</p>
+       <p><img src="https://images.pexels.com/photos/1145257/pexels-photo-1145257.jpeg?
+       cs=srgb&dl=white-mountain-bike-parks-near-white-concrete-poster-on-gray-1145257.jpg&fm=jpg" width="180" height="140"></p>
+    	Address: Nieuwestraat 95<br> Gent, 9050.<br>\
+    	<a href="https://www.google.be/maps/@50.8100608,3.343327,14z" target="_blank">Get Directions</a>`,
+
+    lat: 51.050, 
+    long: 3.720,
+  }
+
+  var locations = [
+    [brussel.info, brussel.lat, brussel.long, brussel.img],
+    [antwerp.info, antwerp.lat, antwerp.long],
+    [brugge.info, brugge.lat, brugge.long],
+    [kortrijk.info, kortrijk.lat, kortrijk.long],
+    [gent.info, gent.lat, gent.long],
+  ]
+
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 10,
+    center: new google.maps.LatLng(51.050, 3.720),
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+  })
+
+  var infowindow = new google.maps.InfoWindow({})
+
+  var marker, i
+
+  for (i = 0; i < locations.length; i++) {
+    marker = new google.maps.Marker({
+      position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+      map: map,
+    })
+
+    google.maps.event.addListener(
+      marker,
+      'click',
+      (function (marker, i) {
+        return function () {
+          infowindow.setContent(locations[i][0])
+          infowindow.open(map, marker)
+        }
+      })(marker, i)
+    )
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
