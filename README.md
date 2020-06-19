@@ -1,11 +1,14 @@
 # SleepOver InAntwerp
 
- The concept behind SleepOver InAntwerp is to help tourists or just about anyone planning to visit the city of Antwerp to find accomodation easily. 
- We underatnd that sometimes one might find themselves not initially planned. We could be visiting a nearby city and decide to pop 
- in to Antwerp or we could also just be driving through the the city and decide to make a stop.
- There're variuous reasons why one might need hotel without any prior reservation.
- 
+ The concept behind SleepOver Hotels is to help tourists or just about anyone planning to visit Belgium to find accomodation easily. 
+ We underatnd that sometimes one might find themselves having to make last minute decisions regarding holidays or sta overs not initially planned. 
+ We could be visiting a The Netherlands, France or German and make a last minute decision to pop in to Belgium for a day or two. 
 
+ SleepOver is a small chain of three hotels and two deluxe guest houses for rents. 
+ They've got got brances in 5 major cities in Belgium. The hotels are located very close to city center. Tourists are able to find facitilties easily,
+ ranging from musuem, shops, public transportations etc.
+ 
+ 
  ## UX
 
 This project is for anyone looking for hotel to rent.
@@ -14,16 +17,16 @@ This project is for anyone looking for hotel to rent.
 - As a user, I can benefit from the hotel pagination search to see different within the area.
 
 - As a user I want to be able to discover new and interesting places.
-  - As a user I want to be recommended hotels based on my chosen destination
+  - As a user I want to be recommended hotels based on a particular destination
   - As a user I want to be recommended several hotels within a specific area
   
 - As a user I want use to a website that gives me the opportunity to see a short description of each hotel
   - As a user  i want to be recommended well known hotels registered on the Google Maps 
   - As a user I want to able to explore a several hotels so I can make a selection
 
-- As a user I want to be able to create a Search experience by performing a manual search of my choice
-  - As a user I want to be recommended hotels options based on my current location 
-  - As a user I want to be able to search for any location or anything  and be given the exact address and location coordinates
+- As a user I want to be able to create an experience by interacting with the page
+  - As a user I want to be able to click on the marker and be taken to the hotel link.
+  
 
 
 ## Features
@@ -33,12 +36,10 @@ The website is made up of a single page.
   - The website is easy to navigate through. The navigation is fixed to the top and is consistent on desktop and mobile.
 - Visuals: 
   - The map is clear and properly set at the top of the page. It occupies 80% of the view height.
-- Panel: 
-   - A panel on the left of the page that gives visitors the address of the searched discovered locations 
+- Marker: 
+   - The markes on the page gives visitors the address of the location
 - Covid Update:
   - Users can click on the button to get live update of the Corona pandemic in Belgium
-- Google map:
-  - The map serves a location finder. Users can search for hotels in Awnterp or use the search box to find other services and automatically get exact address 
 - Responsiveness:
   - The website is developed with the notion of mobile-first and is thus, fully reponsible.
 - The website is intuitive and the content is relevant 
@@ -46,10 +47,10 @@ The website is made up of a single page.
 
 ### Existing Features
 
-- Geolocation is centered for the city of Antwerp- A user can click on the more button and use pagination to to get more search results 
-- Search box- A user can perform a manual search by using the search box and be taken to the exact address and coordinates of the searched results                      -
+- Geolocation is centered for the city of Gent- A user can click on each marker to get more results about the specific location.
+- Detailed Markers.- Contains useful information about the hotel                      -
 - Covid-19 API- A user can get live update about the Corona virus while in Belgium.
-- Referesh button- User can click on this button to refresh the API updates or the entire page 
+- Logo- User can click on this logo to refresh the API updates or the entire page 
 
 ### Features left to implement
 
@@ -95,16 +96,11 @@ This projet is built using HTML, CSS and Bootstrap
    2. clicking on the logo refreshes the home page.
 
 2. Map:
-   1. Open the page, a few search results appear automatically.
-   2. The clicks on the more button and uses pagiation to get more esults.
-   3. Searc box- Enter a search manually  and be use the autoComplete option to select choose a service, building or location.
-   4. The exact formatted address along with the coordinates of the location are shown in a table below the map.
+   1. Open the page, map is centered at the coordinates of Gent.
+   2. The clicks on the markers reveal specicific information about the hotel or guest house.
+   3. Pegman- Drop the pegman at a specific location for street viem.  
 
-3. Markers: 
-   1. Mouse on a marker on the map. This name of the hotel or service is shown in a amal dialog box
-   2. Click on a POI to reveal detailed information about it.
-
-4. Covid API:
+3. Covid API:
    1. Click on the 'Live geographic Covid update' button
    2. The button toggles a table with updates about covid-19 in the area 
    3. Click on the button to toggle off the display
@@ -120,15 +116,9 @@ The code consist of a single page website in HTML, CSS, Bootstrap, JavaScript an
 ### Content
 
 - Tips for map on the home page where taken and edited from:
-  - https://developers.google.com/maps/gmp-get-started
-  - https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete
-  - https://developers.google.com/maps/documentation/javascript/examples/rectangle-event
+  - https://developers.google.com/maps/gmp-get-started  
   - https://developers.google.com/maps/documentation/javascript/markers
-  - https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete
-  - https://developers.google.com/maps/documentation/javascript/examples/place-details
-  - https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-addressform
-  
-  
+     
 - The link for the Covid-19 API update is taken from:
   - https://www.programmableweb.com/coronavirus-covid-19
   
@@ -137,7 +127,8 @@ The code consist of a single page website in HTML, CSS, Bootstrap, JavaScript an
   
 - The images on the side panel are taken directly from google maps
   - https://developers.google.com/maps/gmp-get-started
+  - https://www.pexels.com/
 
 
 ### Acknowledgements
-- I received inspiration for this project from AirBnB
+- I got my inspiration for this project from Holiday Inn
