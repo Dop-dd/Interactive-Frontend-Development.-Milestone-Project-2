@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>myPlanner</title>
-    <link
+    <link 
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     />
-    <link
+    <link 
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
@@ -24,90 +24,98 @@
     ></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
-    <script type="text/javascript" src="assets/js/script.js"></script>
-
-    <!-- GoogleMaps Places library -->
+     <script type="text/javascript" src="assets/js/script.js"></script>        
+ 
+    <!-- GoogleMaps Places library -->    
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-  </head>
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a href="index.html" class="navbar-brand"
-          >SleepOver <span><i class="fa fa-hotel"></i><br />InAntwerp</span></a>
-      </nav>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/json3/3.3.3/json3.min.js" integrity="sha256-M/TEEveqQHtdiIJEaHHq7zDoeHA2qRwdQgUMc8w9GzY=" crossorigin="anonymous"></script>
+  </head>  
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <a href="index.html" class="navbar-brand" 
+        >Hotels <span><i class="fa fa-hotel"></i><br />InAntwerp</span></a>  
+      <!---  <input id="searchInput" class="controls" type="text" placeholder="Enter a location">  -->      
+</nav>
+     
+<!-- The div to hold the map -->          
+    <div id="map"></div>                                
+                                              
+
+<section class="details container corona-info">  
       <h2 id="details-header">Find a hotel in Antwerp</h2>
-    </header>
+      <h5 id="sub-header">
+        Or allow geolocation to find hotels within your current location!
+      </h5>
+      <button type="button" class="btn btn-secondary btn-lg btn-block hero-button">
 
-    <!-- The slide-out panel for showing place details -->
-    <div id="panel">
-      <h2>Nearby Hotels</h2>
-      <ul id="places"></ul>
-      <button id="more">More results</button>
-    </div>
+        <sup>while in Belgium!</sup> Live geographic Covid19 update
+        <i class="fa fa-spinner fa-spin" style="font-size: 24px;"></i>
+      </button>
+      <div class="col-sm-12">
+        <!---This div is used for jQuery Toggle element-for Full Address--->
+        <div class="covid-update">
+          <!-- Display Geographic Covid-19 live info -->
 
-    <!-- Map comes in here -->  
-    <div id="map"></div>          
-
-    <!-- Display geolocation data -->
-    <section class="container geo-data">
-      <input
-        id="searchInput"
-        class="controls"
-        type="text"
-        placeholder="Enter a location"
-      />
-      <p class="text">Get the address of a searched location!</p>
-
-      <table class="table covid19-API">
-        <thead>
-          <tr>
-            <th>Full Address</th>
-            <th>Post Code</th>
-            <th>Land</th>
-            <th>Latitude</th>
-            <th>Longitude</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td data-label="Full Address">
-              <span id="location"></span>
-            </td>
-            <td data-label="Post Code">
-              <span id="postal_code"></span>
-            </td>
-            <td data-label="Land"><span id="country"></span></td>
-
-            <td data-label="Latitude">
-              <span id="latt"></span>
-            </td>
-
-            <td data-label="Longitude"><span id="long"></span></td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-    <!-- End of Table -->
-
-    <!-- Footer -->
+          <table class="table covid19-API">
+            <thead>
+              <tr>
+                <th>Worldwide Cases</th>
+                <th>Wordwide Deaths</th>
+                <th>Country</th>
+                <th>Population</th>
+                <th>Country Id</th>
+                <th>Last updated</th>
+                <th>Confirmed Cases</th>
+                <th>Deaths</th>
+              </tr>
+            </thead>
+ 
+            <tbody>
+              <tr>
+                <td data-label="Worldwide Cases">
+                  <span id="latest-all"></span>
+                </td>
+                <td data-label="Wordwide Deaths">
+                  <span id="deaths-all"></span>
+                </td>
+                <td data-label="Country"><span id="country-name"></span></td>
+                <td data-label="Population">
+                  <span id="country_population"></span>
+                </td>
+                <td data-label="Country Id"><span id="idd"></span></td>
+                <td data-label="Country Id"><span id="last_updated"></span></td>
+                <td data-label="Confirmed Cases">
+                  <span id="confirmed"></span>
+                </td>
+                <td data-label="Deaths"><span id="deaths"></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>      
+    </section>                                       
+                                                                        
+<!-- Footer -->  
     <footer class="page-footer font-small blue container-fluid">
       <!-- Copyright -->
-      <div class="footer-copyright text-center pt-4 text-warning h5">
+      <div class="footer-copyright text-center pt-4 text-warning h5"> 
         © 2020 Copyright:
-        <a href="index.html"> SleepOver InAntwerp </a>
+        <a href="index.html"> Fitness </a>
       </div>
     </footer>
-    <!-- End of Footer -->
-
-    <!-- GooleMaps API Key-->
+    <!-- End of Footer -->                        
+              
+    <!-- GooleMaps API Key-->                 
+   
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCd097yoP0Le6Qa2-JctA8ZQSjq1UTEF60&libraries=places&callback=initMap"
-      async
-      defer
-    ></script>
+      async  defer>
+      </script>
 
     <script src="assets/js/map.js"></script>
-  </body>
-</html>
+   <!----<script type="text/javascript" src="assets/js/hotels.json"></script>  -->
+    
+       
+</body>
+</html>               
