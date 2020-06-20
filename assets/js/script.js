@@ -1,6 +1,3 @@
-
-
-
 /*-----------Location Details Toggle-------------*/
 
 $(document).ready(function () {
@@ -10,6 +7,7 @@ $(document).ready(function () {
 });
 
 /*-----------Location Details End-------------*/
+
 
 /*-----------Covid-19 Info-------------*/
 

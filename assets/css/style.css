@@ -5,8 +5,6 @@
   margin-top: 1px;
 }
 
-/* Makes the sample page fill the required window. */
-
 html,
 body {
   height: 100%;
@@ -127,7 +125,7 @@ sup {
   color: #fff;
   text-align: center;
   position: relative;
-  top: 40%;
+  top: 20%;
   left: 30%;
 }
 
@@ -177,7 +175,7 @@ footer a {
 /*------------Media Queries -------------*/
 
 @media screen and (max-width: 632px) {
-  /*------------Table-------------*/
+  /*---------Table--------*/
   .navbar-brand {
     font-size: 15px;
     color: white;
@@ -186,6 +184,29 @@ footer a {
   /*------Geo Data Div ---*/
   .geo-data {
     margin-top: 360px;
+  }
+
+  /*------Map Marker Styling-----*/
+  .info-heading {
+    color: red;
+    text-align: center;
+  }
+
+  .map-image img {
+    height: 80px;
+    width: 180px;
+  }
+
+  .map-text {
+    font-size: 10px;
+    margin-top: 5px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .map-desc {
+    font-size: 12px;
+    text-align: center;
   }
 
   /*------------Table-------------*/
@@ -227,7 +248,7 @@ footer a {
     font-size: 22px;
   }
 
-  /*----------Headers---------*/
+  /*--------Headers------*/
   #top-header {
     color: #fff;
     text-align: center;
@@ -246,15 +267,15 @@ footer a {
   #sub-header {
     font-size: 1rem;
   }
-}
 
-/*----------Footer-----------*/
-footer {
-  height: 80px;
-  background-color: rgba(77, 74, 71, 0.89);
-  margin-top: 50px;
-}
+  /*-------Footer-------*/
+  footer {
+    height: 80px;
+    background-color: rgba(77, 74, 71, 0.89);
+    margin-top: 50px;
+  }
 
-footer a {
-  color: #fff;
+  footer a {
+    color: #fff;
+  }
 }
