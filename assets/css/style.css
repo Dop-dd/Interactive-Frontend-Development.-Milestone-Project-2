@@ -55,13 +55,13 @@ header {
 }
 
 .map-text {
-  font-size: 12px;
+  font-size: 11px;
   margin-top: 10px;
   font-weight: 600;
 }
 
 .map-desc {
-  font-size: 15px;
+  font-size: 13px;
 }
 /*----End of--Map Marker Styling--------*/
 
@@ -71,13 +71,6 @@ header {
   height: auto;
   max-height: 166px;
   display: block;
-}
-
-.place,
-p {
-  font-family: "open sans", arial, sans-serif;
-  padding-left: 12px;
-  padding-right: 12px;
 }
 
 .details {
