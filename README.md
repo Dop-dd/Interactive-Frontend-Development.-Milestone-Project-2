@@ -31,7 +31,7 @@ This project is for anyone looking for hotel to rent.
   - assets/wireframe/Milestone\ 2\ Mockup.pdf   
 
 - website
-  - https://dop-dd.github.io/User-Centric-MileStone-Project-1/index.html
+  - https://dop-dd.github.io/Interactive-Frontend-Development.-Milestone-Project-2/
 
 
 ## Demo 
