@@ -27,6 +27,17 @@ This project is for anyone looking for hotel to rent.
 - As a user I want to be able to create an experience by interacting with the page
   - As a user I want to be able to click on the marker and be taken to the hotel link.
   
+- Link to Mockups 
+  - assets/wireframe/Milestone\ 2\ Mockup.pdf   
+
+- website
+  - https://dop-dd.github.io/User-Centric-MileStone-Project-1/index.html
+
+
+## Demo 
+
+- Screen shot
+  - ![Image of website](/assets/img/screenshot.png) 
 
 
 ## Features
