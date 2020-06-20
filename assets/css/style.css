@@ -85,15 +85,13 @@ a {
 
 /*-------Hero Button------*/
 .hero-button {
-  background-color: rgba(77, 74, 71, 0.89);
-  border-radius: none;
+  background-color: rgba(77, 74, 71, 0.89);  
   color: white;
   text-align: center;
   padding: 4px;
   position: relative;
   bottom: 10px;
-  margin-top: 40px;
-  text-decoration-style: none;
+  margin-top: 40px;  
   font-size: 25px;
   height: 60px;
   width: 100%;
@@ -110,7 +108,8 @@ sup {
 
 /*-----------Covid19 API--------*/
 .corona-info {
-  margin-top: 60px 50px;
+  margin-top: 60px; 
+  margin-bottom: 50px;
 }
 
 /*----------Headers------------*/
